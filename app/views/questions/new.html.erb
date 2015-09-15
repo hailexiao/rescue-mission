@@ -3,12 +3,12 @@
 <%= form_for :question, url: questions_path do |f| %>
   <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, minlength: 40 %>
   </p>
 
   <p>
     <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.text_field :body, minlength: 150 %>
   </p>
 
   <p>

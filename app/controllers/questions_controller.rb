@@ -2,6 +2,10 @@ class QuestionsController < ApplicationController
   def new
   end
 
+  def index
+    @questions = Question.order(created_at: :desc)
+  end
+
   def create
     @question = Question.create(question_params)
     redirect_to @question
