@@ -1,0 +1,21 @@
+<h1>New Answer</h1>
+
+<p>
+  <strong><%= @question.title %></strong>
+</p>
+
+<p>
+  <%= @question.body %>
+</p>
+
+<%= form_for @answer, url: question_answers_path do |f| %>
+  <p>
+    <%= f.label :body, value: "Response" %><br>
+    <%= f.text_area :body, size: "30x5", minlength: 50 %>
+    <%= f.hidden_field :question_id, value: @question.id %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

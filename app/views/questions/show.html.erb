@@ -6,4 +6,11 @@
   <%= @question.body %>
 </p>
 
+<ul>
+  <% @answers.each do |answer| %>
+  <li><%= answer.body %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Answer this question", new_question_answer_path(@question) %><br>
 <%= link_to "Back to the list of questions", root_path %>
