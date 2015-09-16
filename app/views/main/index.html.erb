@@ -1,0 +1,8 @@
+<h1>Questions</h1>
+<ol>
+  <% @questions.each do |question| %>
+  <li><a href="/questions/<%= question.id %>"><%= question.title %></a></li>
+  <% end %>
+
+  <%= link_to "Ask a Question", controller: "questions", action: "new" %>
+</ol>

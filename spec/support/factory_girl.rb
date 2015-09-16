@@ -7,4 +7,8 @@ FactoryGirl.define do
     body Faker::Lorem.paragraph
   end
 
+  factory :answer do
+    body Faker::Lorem.paragraph
+  end
+
 end
